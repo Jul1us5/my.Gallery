@@ -29,7 +29,7 @@ axios.get(url).then((resp) => {
   for (let i = 0; i < name.length; i++) {
     dataListSmall += `<div class="row">
                         <div class="column">
-                        <img src="https://picsum.photos/id/${name[i].id}/350/350" background-size="cover" loading="lazy" alt="${name[i].author}">
+                        <img src="https://picsum.photos/id/${name[i].id}/350/350" loading="lazy" alt="${name[i].author}">
                         </div>
                       </div>`;
   }
@@ -43,7 +43,7 @@ axios.get(url).then((resp) => {
     if (i == 0) {
       row[i].classList.add("active");
     }
-    row[i].addEventListener("click", (e) => {
+    row[i].addEventListener("click", () => {
       plusSlides(i);
 
       let current = document.getElementsByClassName("active");

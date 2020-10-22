@@ -503,8 +503,9 @@ body {
 }
 
 .wrapper aside .row {
-  background-color: aqua;
   opacity: 0.6;
+  -webkit-animation: moving 20s linear infinite alternate;
+          animation: moving 20s linear infinite alternate;
 }
 
 .wrapper aside .row .column {
@@ -541,6 +542,28 @@ body {
   display: none;
 }
 
+@-webkit-keyframes moving {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+}
+
+@keyframes moving {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+}
+
 @media only screen and (max-width: 600px) {
   body {
     overflow: auto;
@@ -560,12 +583,6 @@ body {
         grid-template-columns: 1fr;
     padding-right: 0px;
   }
-  .wrapper section .mySlides {
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: center center;
-       object-position: center center;
-  }
   .wrapper section .prev, .wrapper section .next {
     cursor: pointer;
     opacity: 0;
@@ -583,6 +600,8 @@ body {
   .wrapper aside .row {
     background-color: aqua;
     opacity: 1;
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
   }
   .wrapper aside .row .column {
     position: relative;
@@ -618,12 +637,6 @@ body {
         grid-template-columns: 1fr;
     padding-right: 0px;
   }
-  .wrapper section .mySlides {
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: center center;
-       object-position: center center;
-  }
   .wrapper section .prev, .wrapper section .next {
     cursor: pointer;
     opacity: 0;
@@ -641,6 +654,8 @@ body {
   .wrapper aside .row {
     background-color: aqua;
     opacity: 1;
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
   }
   .wrapper aside .row .column {
     position: relative;
