@@ -58,7 +58,7 @@ axios.get(url).then((resp) => {
     move(1);
   });
 
-  var slideIndex = 1;
+  let slideIndex = 1;
   showSlides(slideIndex);
 
   function plusSlides(n) {
@@ -69,8 +69,8 @@ axios.get(url).then((resp) => {
   }
 
   function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
     if (n > slides.length) {
       slideIndex = 1;
     }
@@ -82,14 +82,4 @@ axios.get(url).then((resp) => {
     }
     slides[slideIndex - 1].style.display = "block";
   }
-
-  var hotbod = document.querySelector("body");
-
-  function doStuff() {
-    hotbod.className += " animate";
-  }
-
-  window.onload = function () {
-    doStuff();
-  };
 });
